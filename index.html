@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <title>Happy Birthday</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <style>
+        .start-btn {
+            font-family: "Sour Gummy";
+        }
+        .title {
+            font-family: "Sour Gummy";
+            letter-spacing: 2px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <p class="ily hidden" id="ily">I Love You</p>
+    <div class="container">
+        <div class="row">
+            <div class="loader">
+                <button id="play" class="start-btn">Haiiii Rimaaa</button>
+            </div>
+        </div>
+    </div>
+    <audio class="song" controls loop>
+        <source src="Kota_ini_tak_sama-tanpamu.mp3">
+        </source>
+        Your browser isn't invited for super fun audio time.
+    </audio>
+    <canvas id="confetti"></canvas>
+    <div class="main">
+        <div class="container pt-5">
+            <div class="row">
+            <div class="eye">
+                <img src="eye.gif" alt="">
+            </div>
+            <div class="rabbit">
+                <img src="rabbit1.gif" alt="">
+            </div>
+
+                <div class="col-12 col-xl-6 mx-auto">
+                    <img src="img/banner.png" alt="">
+                </div>
+                <div class="love1">
+                    <img src="love.gif" alt="Animasi loading">
+                </div>
+                <div class="love2">
+                    <img src="love.gif" alt="Animasi loading">
+                </div>
+                <div class="love3">
+                    <img src="love.gif" alt="Animasi loading">
+                </div>
+                <div class="love4">
+                    <img src="love.gif" alt="Animasi loading">
+                </div>
+                <div class="love5">
+                    <img src="love.gif" alt="Animasi loading">
+                </div>
+
+                <div class="dekorasi1" id="dekorasi1">
+                    <img src="dekorasi.gif" alt="Animasi loading">
+                </div>
+                <div class="dekorasi2" id="dekorasi2">
+                    <img src="dekorasi.gif" alt="Animasi loading">
+                </div>
+                <div class="col-12  text-center">
+                    <div id="name" class="area title">Rima Meilani Lubis</div>
+                </div>
+
+                <div class="col-12 text-center">
+                    <div class="type-wrap">
+                        <div id="typed-strings" class="typing">
+                            <h2>Happy Birthday <i id="nae">Rimaaa</i></h2>
+                            <h2>Have a wonderful day</h2>
+                            <h2>Always be the best</h2>
+                            <h2>and</h2>
+                            <h2>I hope you always stay true to who you are</h2>
+                            <h2>YEAYYYYYYY</h2>
+                        </div>
+                        <span id="typed" style="white-space:pre;"></span>
+                    </div>
+                </div>
+
+                <div class="invis"></div>
+                <!-- gift -->
+                <div class="gift shake" id="gift">
+                    <div class="lid" id="lid">
+                        <div class="bow bow-left"></div>
+                        <div class="bow bow-right"></div>
+                    </div>
+
+                    <div class="box">
+                        <div class="ribbon-vertical"></div>
+                        <div class="ribbon-horizontal"></div>
+                    </div>
+                </div>
+                <div id="background" class="bg-card hidden">
+                    <div class="flip-card">
+                    <div class="flip-card-inner">
+                        
+                        <!-- Sisi Depan -->
+                        <div class="flip-card-front card" id="card">
+                        <p>Arahin kursornyaaa</p>
+                        </div>
+
+                        <!-- Sisi Belakang -->
+                        <div class="flip-card-back">
+                        <h2>HAYOOOO</h2>
+                        <p>🎉Nyarii apaaa🎉</p>
+                        <img src="rima.png" alt="" class="img-rima">
+                        </div>
+
+                    </div>
+                    </div>
+                    <p class="close hidden" id="close">Close</p>
+                </div>
+
+                <div class="col-12 col-xl-3 cake">
+                    <img src="img/cake.gif" alt="">
+                </div>
+            </div>
+        </div>
+        <img src="img/Balloon-Border.png" width="100%" class="balloon-border">
+    </div>
+</body>
+<script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/typed.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+    const gift = document.getElementById("gift");
+    const bg = document.getElementById("background");
+    const card = document.getElementById("card");
+    const cls = document.getElementById("close");
+    const dekorasi1 = document.getElementById("dekorasi1");
+    const dekorasi2 = document.getElementById("dekorasi2");
+    const play = document.getElementById("play");
+    const ily = document.getElementById("ily");
+
+
+gift.addEventListener("click", () => {
+  gift.classList.add("open");
+  gift.classList.remove("shake");
+  dekorasi1.classList.add("hidden");
+  dekorasi2.classList.add("hidden");
+  gift.classList.remove("btm")
+  gift.classList.remove("closed")
+  bg.classList.remove("hidden")
+  cls.classList.remove("hidden")
+  ily.classList.remove("hidden");
+});
+
+cls.addEventListener("click", () => {
+    gift.classList.remove("open");
+    gift.classList.add("closed");
+    gift.classList.add("shake");
+    gift.classList.add("btm");
+    bg.classList.add("hidden");
+    cls.classList.add("hidden");
+})
+
+</script>
+
+</html>

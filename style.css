@@ -1,0 +1,382 @@
+/* customizable snowflake styling */
+.loader button {
+    width: 50%;
+    height: 100px;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    background: center no-repeat #fff;
+    z-index: 9999999999999999999999;
+    font-size: 50px;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    border-radius: .3em;
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+        inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+    border: 1px solid #a55d07;
+    color: rgb(120, 50, 5);
+    text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.golden-btn:focus,
+.golden-btn:hover {
+    background-size: 150% 150%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+        inset 0 -2px 5px 1px #b17d10,
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    border: 1px solid rgba(165, 93, 7, .6);
+    color: rgba(120, 50, 5, .8);
+}
+
+.golden-btn:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+        inset 0 -2px 5px 1px #b17d10,
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+}
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: url(img/back.png) center no-repeat #000;
+}
+
+.song {
+    display: none;
+}
+
+body {
+    background:linear-gradient(135deg,#ff9a9e,#fecfef,#fcb1d1);;
+}
+
+img {
+    width: 100%;
+}
+
+.ily {
+    color:#f8c7dd;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    z-index: 9999999999999999999999;
+}
+
+.ily:hover {
+    color : #f7bcd7;
+    cursor: pointer;
+}
+
+.eye {
+    width: 200px;
+    position: absolute;
+    z-index: -100;
+}
+
+.rabbit {
+    width: 250px;
+    position: absolute;
+    z-index: -100;
+    bottom: 0;
+    right: 40px;
+    transform: rotateY(180deg);
+}
+
+.love1 {
+    top: 100px; 
+    left: 150px;
+    position: absolute;
+    z-index: -100;
+    width: 200px;}
+.love2 {top: 100px; right: 100px;position: absolute;
+    z-index: -100;
+    width: 200px;}
+.love3 {top: 400px; right: 450px;position: absolute;
+    z-index: -100;
+    width: 200px;}
+.love4 {bottom: 200px; left: 50px;position: absolute;
+    z-index: -100;
+    width: 200px;}
+.love5 {bottom: 50px; right: 200px;position: absolute;
+    z-index: -100;
+    width: 200px;}
+
+.dekorasi1 {
+    position: absolute;
+    width: 500px;
+    z-index: -100;
+    bottom: 0px;
+    left: 100px;
+}
+.dekorasi2 {
+    position: absolute;
+    width: 500px;
+    z-index: -100;
+    bottom: 0px;
+    right: 100px;
+}
+
+/* Kado */
+.gift {
+  position: relative;
+  width: 200px;
+  cursor: pointer;
+}
+
+.invis {
+    height: 350px;
+}
+
+/* Goyang */
+.shake {
+  animation: shake 2s infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(2deg); }
+  75% { transform: rotate(-2deg); }
+}
+
+/* Tutup */
+.lid {
+  width: 170px;
+  height: 30px;
+  background: #e74c3c;
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  border-radius: 6px;
+  transition: 0.8s ease;
+  transform-origin: left bottom;
+  z-index: 3;
+}
+
+/* Container */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  position: absolute;
+  top: 300px;
+  left: 350px;
+}
+
+.img-rima {
+    width: 100px;
+    border-radius: 20px;
+}
+/* Inner */
+.flip-card-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+  top: -100px;
+}
+
+/* Flip saat hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  top: 120px;
+  left: -2px;
+  width: 200px;
+  height: 300px;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+/* Depan */
+.flip-card-front {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+}
+
+/* Belakang */
+.flip-card-back {
+  background: linear-gradient(150deg, #22c55e, #166534);
+  transform: rotateY(180deg);
+}
+
+/* Kotak */
+.box {
+  width: 150px;
+  height: 100px;
+  background: #e74c3c;
+  border-radius: 6px;
+  position: relative;
+}
+
+/* Pita */
+.ribbon-vertical {
+  width: 24px;
+  height: 100%;
+  background: #f1c40f;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ribbon-horizontal {
+  width: 100%;
+  height: 24px;
+  background: #f1c40f;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Pita atas */
+.bow {
+  width: 40px;
+  height: 24px;
+  border: 4px solid #f1c40f;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+}
+
+.bow-left { left: 55px; transform: rotate(-20deg); }
+.bow-right { left: 85px; transform: rotate(20deg); }
+
+/* Card */
+.card {
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  transform: translatey(-50%);
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  transition: 1s ease;
+  z-index: 99999999999999;
+  margin: 20px;
+  position: relative;
+  top: 270px;
+}
+
+
+/* Kado terbuka */
+.gift.open .lid {
+  transform: rotate(-45deg) translate(-20px, -20px);
+}
+.closed {
+  transform: rotate(45deg) translate(20px, 20px);
+}
+.btm {
+    bottom: -20px
+}
+
+.gift.open .card {
+  bottom: 20px;
+}
+
+.close {
+    color: black;
+    cursor: pointer;
+    height: fit-content;
+    position: absolute;
+    bottom: 45px;
+    left: 330px;
+}
+
+.close:hover {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.balloon-border {
+    position: fixed;
+    top: 100%;
+    opacity: 0.5;
+    z-index: 99999999;
+}
+
+.area {
+    text-align: center;
+    font-size: 70px;
+    color: #C4515C;
+    letter-spacing: -7px;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: spin 2s ease-out infinite;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+#nae {
+    text-transform: capitalize;
+}
+
+#confetti {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0);
+    }
+
+    25% {
+        transform: rotateZ(10deg);
+    }
+
+    50% {
+        transform: rotateZ(0deg);
+    }
+
+    75% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+.type-wrap {
+    font-size: 25px;
+    color: #C4515C;
+
+}
+
+.cake {
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    padding-top: 250px;
+}
